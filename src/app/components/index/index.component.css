@@ -15,7 +15,35 @@
     width: 100%;              /* Asegura que las imágenes respeten el ancho */
   }
   .cuerpo{
-    background: linear-gradient(to bottom, #ce6400, #cd8745); /* Cambia los colores según prefieras */
+    background: linear-gradient(to bottom, #ce6400, #ffffff); /* Cambia los colores según prefieras */
     margin: 0; /* Elimina márgenes predeterminados */
-    height: 100vh; /* Asegura que cubra toda la altura de la pantalla */
+    height: 100%; /* Asegura que cubra toda la altura de la pantalla */
+  }
+  h1 {
+    padding: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 50px; /* Ajusta el espacio entre letras */
+    font-size: 300%;
+    text-align: center;
+  }
+
+  .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .categorias{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 40px;
+    width: 200px;             /* Ancho del contenedor */
+    height: 200px;            /* Alto del contenedor */
+    align-items: center;      /* Centra horizontalmente */
+    text-align: center;       /* Alinea el texto */
+    
+  }
+  .pequenia {
+    width: 200px;              /* Imagen ocupa todo el ancho del contenedor */
+    height: 200px;             /* Ajusta la altura proporcionalmente */
   }

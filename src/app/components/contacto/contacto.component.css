@@ -1,0 +1,32 @@
+.cuerpo{
+    background: linear-gradient(to bottom, #ce6400, #ffffff); /* Cambia los colores según prefieras */
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100%; /* Asegura que cubra toda la altura de la pantalla */
+  }
+.contacto{
+    width: 100%;
+    height:auto;
+}
+h1 {
+    padding: 40px;
+    letter-spacing: 50px; /* Ajusta el espacio entre letras */
+    font-size: 300%;
+    text-align: center;
+  }
+h4{
+    padding: 40px;
+    font-size: 300%;
+    text-align: center;
+}
+a{
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;
+}
+a:hover{
+    color: rgb(98, 98, 98);
+}
+h6{
+    padding: 40px;
+    text-align: center;
+}
