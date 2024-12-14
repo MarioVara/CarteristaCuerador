@@ -1,0 +1,12 @@
+.cuerpo{
+    background: linear-gradient(to bottom, #ce6400, #ffffff); /* Cambia los colores según prefieras */
+    margin: 0; /* Elimina márgenes predeterminados */
+    height: 100%; /* Asegura que cubra toda la altura de la pantalla */
+  }
+  h1 {
+    padding: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 50px; /* Ajusta el espacio entre letras */
+    font-size: 300%;
+    text-align: center;
+  }

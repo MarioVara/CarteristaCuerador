@@ -7,13 +7,13 @@
     <div id="carouselExampleControls" class="carrusel carousel slide" data-bs-ride="carousel">
         <div class="centro carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="slider1.JPG" alt="First slide">
+            <img class="d-block w-100" src="slider1.png" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="slider3.JPG" alt="Second slide">
+            <img class="d-block w-100" src="slider3.png" alt="Second slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="slider2.JPG" alt="Third slide">
+            <img class="d-block w-100" src="slider2.png" alt="Third slide">
         </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -28,31 +28,34 @@
     
 
     <div class="contenedor">    
-        <div class="categorias">
+        <div class="categorias" (click)="moversea('todas', 'carteras')">
             <h2>Carteras</h2>
             <div class="pequenia">
-                <img class="pequenia" src="slider1.JPG" alt="carteras">
+                <img class="pequenia" src="cartera.png" alt="carteras" >
             </div>
         </div>
-        <div class="categorias">
+        <div class="categorias" (click)="moversea('todas', 'monederos')">
             <h2>Monederos</h2>
             <div class="pequenia">
-                <img class="pequenia" src="slider2.JPG" alt="carteras">
+                <img class="pequenia" src="slider2.JPG" alt="Monederos">
             </div>
-        </div><div class="categorias">
+        </div>
+        <div class="categorias" (click)="moversea('todas', 'tabaqueras')">
             <h2>Tabaqueras</h2>
             <div class="pequenia">
-                <img class="pequenia" src="slider3.JPG" alt="carteras">
+                <img class="pequenia" src="tabaquera.png" alt="Tabaqueras">
             </div>
-        </div><div class="categorias">
+        </div>
+        <div class="categorias" (click)="moversea('todas', 'riñoneras')">
             <h2>Riñoneras</h2>
             <div class="pequenia">
-                <img class="pequenia" src="slider1.JPG" alt="carteras">
+                <img class="pequenia" src="slider1.JPG" alt="Riñoneras">
             </div>
-        </div><div class="categorias">
+        </div>
+        <div class="categorias" (click)="moversea('todas', 'otros')">
             <h2>Otros</h2>
             <div class="pequenia">
-                <img class="pequenia" src="slider2.JPG" alt="carteras">
+                <img class="pequenia" src="otros.png" alt="Otros">
             </div>
         </div>
     </div>

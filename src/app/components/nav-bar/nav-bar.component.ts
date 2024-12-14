@@ -11,11 +11,15 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
   constructor(private router: Router){}
-  
+  ngOnInit() {
+    
+  }
   moversea(a: string){
     this.router.navigate(['/'+a])
   }
-  moversecon(a: string){
-
+  moversecon(a: string, con: string){
+    //Aqui tengo que meter también el parámetro para hacer la petición a la base de datos de lo que quiero recoger
+    this.router.navigate(['/'+a+'/'+con]);
+    
   }
 }

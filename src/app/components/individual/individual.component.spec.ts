@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MonederosComponent } from './monederos.component';
+import { IndividualComponent } from './individual.component';
 
-describe('MonederosComponent', () => {
-  let component: MonederosComponent;
-  let fixture: ComponentFixture<MonederosComponent>;
+describe('IndividualComponent', () => {
+  let component: IndividualComponent;
+  let fixture: ComponentFixture<IndividualComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MonederosComponent]
+      imports: [IndividualComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MonederosComponent);
+    fixture = TestBed.createComponent(IndividualComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

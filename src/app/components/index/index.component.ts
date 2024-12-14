@@ -9,5 +9,9 @@ import { Router, RouterOutlet } from '@angular/router';
   standalone:true
 })
 export class IndexComponent {
+  constructor(private router:Router){}
 
+  moversea(a: string, con: string){
+    this.router.navigate(['/'+a+'/'+con]);
+  }
 }
