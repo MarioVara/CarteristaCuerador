@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
-
+import { ComunService } from '../../service/comun.service';
 @Component({
   selector: 'app-nav-bar',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,RouterLink],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css',
   standalone:true
 })
 export class NavBarComponent {
-  constructor(private router: Router){}
+  constructor(private router: Router, private comun:ComunService){}
   ngOnInit() {
     
   }
   moversea(a: string){
     this.router.navigate(['/'+a])
   }
+  
   moversecon(a: string, con: string){
-    //Aqui tengo que meter también el parámetro para hacer la petición a la base de datos de lo que quiero recoger
-    this.router.navigate(['/'+a+'/'+con]);
-    
+    this.comun.setCookie(con);
+    this.comun.irA(a, con);
   }
 }
