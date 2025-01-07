@@ -2,15 +2,19 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { ComunService } from '../../service/comun.service';
+import { GettersService } from '../../server/getters.service';
+import { Foto } from '../../model/model';
 @Component({
   selector: 'app-nav-bar',
-  imports: [RouterOutlet,RouterLink],
+  imports: [],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css',
   standalone:true
 })
 export class NavBarComponent {
-  constructor(private router: Router, private comun:ComunService){}
+  constructor(private router: Router, private comun:ComunService, private get: GettersService){}
+    resultado!:Foto[];
+  
   ngOnInit() {
     
   }
@@ -20,6 +24,7 @@ export class NavBarComponent {
   
   moversecon(a: string, con: string){
     this.comun.setCookie(con);
-    this.comun.irA(a, con);
+    this.router.navigate(['/'+a+'/'+con]);
+    
   }
 }

@@ -1,17 +1,17 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { __values } from 'tslib';
+import { Router } from '@angular/router';
 import { ComunService } from '../../service/comun.service';
 import { GettersService } from '../../server/getters.service';
 import { Foto } from '../../model/model';
+
 @Component({
-  selector: 'app-todas',
+  selector: 'app-carteras',
   imports: [],
-  templateUrl: './todas.component.html',
-  styleUrl: './todas.component.css',
-  standalone:true,
+  templateUrl: './carteras.component.html',
+  styleUrl: './carteras.component.css',
+  standalone:true
 })
-export class TodasComponent implements OnInit{
+export class CarterasComponent implements OnInit{
   constructor(private router:Router, private comun:ComunService, private get:GettersService){}
 
   categoria:string = "";
@@ -21,7 +21,7 @@ export class TodasComponent implements OnInit{
   url:string ='http://localhost/carteristacuerador/fotos/';
   
   ngOnInit(): void {
-    this.get.getTodasPrincipales().subscribe(result =>{
+    this.get.getPrincipalesDe(this.comun.getCookie()).subscribe(result =>{
       this.resultado = result;
       console.log(this.resultado)}
     )

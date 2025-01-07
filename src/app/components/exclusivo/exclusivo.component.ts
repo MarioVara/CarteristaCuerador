@@ -1,18 +1,18 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { __values } from 'tslib';
+import { Router } from '@angular/router';
 import { ComunService } from '../../service/comun.service';
 import { GettersService } from '../../server/getters.service';
 import { Foto } from '../../model/model';
+
 @Component({
-  selector: 'app-todas',
+  selector: 'app-exclusivo',
   imports: [],
-  templateUrl: './todas.component.html',
-  styleUrl: './todas.component.css',
-  standalone:true,
+  templateUrl: './exclusivo.component.html',
+  styleUrl: './exclusivo.component.css',
+  standalone:true
 })
-export class TodasComponent implements OnInit{
-  constructor(private router:Router, private comun:ComunService, private get:GettersService){}
+export class ExclusivoComponent implements OnInit {
+constructor(private router:Router, private comun:ComunService, private get:GettersService){}
 
   categoria:string = "";
   esLaCategoria:string ="";
@@ -21,7 +21,7 @@ export class TodasComponent implements OnInit{
   url:string ='http://localhost/carteristacuerador/fotos/';
   
   ngOnInit(): void {
-    this.get.getTodasPrincipales().subscribe(result =>{
+    this.get.getPrincipalesDe(this.comun.getCookie()).subscribe(result =>{
       this.resultado = result;
       console.log(this.resultado)}
     )

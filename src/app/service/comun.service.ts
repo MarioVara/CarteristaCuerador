@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService} from 'ngx-cookie-service';
+import { Foto } from '../model/model';
+import { GettersService } from '../server/getters.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,7 @@ export class ComunService {
 
   constructor(private router: Router, private cookie:CookieService) { }
 
-
+  resultado!:Foto[];
 
 
 //Aqui tengo que meter también el parámetro para hacer la petición a la base de datos de lo que quiero recoger
@@ -18,7 +20,7 @@ export class ComunService {
     window.location.reload();
   }
   setCookie(text:string){
-    this.cookie.set('categoria', text)
+    this.cookie.set('categoria', text);
   }
 
   getCookie(){

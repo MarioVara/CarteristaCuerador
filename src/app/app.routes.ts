@@ -1,11 +1,15 @@
 import { Routes } from '@angular/router';
-import path from 'path';
 import { IndexComponent } from './components/index/index.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
-import { writeResponseToNodeResponse } from '@angular/ssr/node';
 import { TodasComponent } from './components/todas/todas.component';
 import { IndividualComponent } from './components/individual/individual.component';
+import { CarterasComponent } from './components/carteras/carteras.component';
+import { MonederosComponent } from './components/monederos/monederos.component';
+import { TabaquerasComponent } from './components/tabaqueras/tabaqueras.component';
+import { RinionerasComponent } from './components/rinioneras/rinioneras.component';
+import { OtrosComponent } from './components/otros/otros.component';
+import { ExclusivoComponent } from './components/exclusivo/exclusivo.component';
 
 
 export const routes: Routes = [
@@ -13,7 +17,15 @@ export const routes: Routes = [
     {path: 'index', component: IndexComponent},
     {path: 'navbar', component: NavBarComponent},
     {path: 'contacto', component: ContactoComponent},
-    {path: 'individual', component: IndividualComponent},
-    {path: 'todas/:categoria', component: TodasComponent}
+    {path: 'individual/:objeto', component: IndividualComponent},
+    {path: 'todas/:categoria', component: TodasComponent},
+    {path: 'carteras/:categoria', component: CarterasComponent},
+    {path: 'monederos/:categoria', component: MonederosComponent},
+    {path: 'tabaqueras/:categoria', component: TabaquerasComponent},
+    {path: 'rinioneras/:categoria', component: RinionerasComponent},
+    {path: 'otros/:categoria', component: OtrosComponent},
+    {path: 'exclusivo/:categoria', component: ExclusivoComponent},
+
+
 
 ];
