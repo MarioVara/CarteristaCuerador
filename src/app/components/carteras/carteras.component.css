@@ -1,7 +1,6 @@
 .cuerpo{
-    background: linear-gradient(to bottom, #ce6400, #ffffff); /* Cambia los colores según prefieras */
+    background: #ce6400; /* Cambia los colores según prefieras */
     margin: 0; /* Elimina márgenes predeterminados */
-    height: 100%; /* Asegura que cubra toda la altura de la pantalla */
   }
 h1 {
     padding: 40px;
@@ -11,8 +10,8 @@ h1 {
     text-align: center;
   }
 .imagen img{
-  width: 300px;
-  height: 300px;
+  width: 300px;             /* Ancho del contenedor */
+  height: 300px;            /* Alto del contenedor */
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -27,12 +26,21 @@ h1 {
   font-size: 18px;
 }
 .galeria{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: auto;
-  width: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 150px;
   justify-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 20px;
   align-items: center;
+  
+}
+.texto{
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: 0px 0px 2px #ffe2c7; /* Sombra blanca */;
+
+}
+.pie{
+  height: 100px;
 }

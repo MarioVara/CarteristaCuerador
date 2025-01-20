@@ -6,7 +6,6 @@ import { TodasComponent } from './components/todas/todas.component';
 import { IndividualComponent } from './components/individual/individual.component';
 import { CarterasComponent } from './components/carteras/carteras.component';
 import { MonederosComponent } from './components/monederos/monederos.component';
-import { TabaquerasComponent } from './components/tabaqueras/tabaqueras.component';
 import { RinionerasComponent } from './components/rinioneras/rinioneras.component';
 import { OtrosComponent } from './components/otros/otros.component';
 import { ExclusivoComponent } from './components/exclusivo/exclusivo.component';
@@ -21,10 +20,9 @@ export const routes: Routes = [
     {path: 'todas/:categoria', component: TodasComponent},
     {path: 'carteras/:categoria', component: CarterasComponent},
     {path: 'monederos/:categoria', component: MonederosComponent},
-    {path: 'tabaqueras/:categoria', component: TabaquerasComponent},
     {path: 'rinioneras/:categoria', component: RinionerasComponent},
     {path: 'otros/:categoria', component: OtrosComponent},
-    {path: 'exclusivo/:categoria', component: ExclusivoComponent},
+    {path: 'exclusivo/:titulo', component: ExclusivoComponent},
 
 
 

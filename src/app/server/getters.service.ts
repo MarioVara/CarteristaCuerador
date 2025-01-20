@@ -23,4 +23,10 @@ export class GettersService {
     console.log(fotos)
     return fotos;
   }
+  getIndividual(titulo:string){
+    const fotos = this.http.get<Foto[]>(`${this.url}consultas.php/getUna/${titulo}`,);
+    console.log(fotos)
+    return fotos;
+
+  }
 }

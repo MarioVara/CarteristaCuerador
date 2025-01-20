@@ -40,6 +40,7 @@ constructor(private router:Router, private comun:ComunService, private get:Gette
     return category;
   }
   moversea (ruta:string, tipo:string){
+    this.comun.setCookieTitulo(tipo)
     this.router.navigate(['/'+ruta+'/'+tipo]);
   }
 

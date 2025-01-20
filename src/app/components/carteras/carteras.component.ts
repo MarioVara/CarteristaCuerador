@@ -40,6 +40,7 @@ export class CarterasComponent implements OnInit{
     return category;
   }
   moversea (ruta:string, tipo:string){
+    this.comun.setCookieTitulo(tipo)
     this.router.navigate(['/'+ruta+'/'+tipo]);
   }
 

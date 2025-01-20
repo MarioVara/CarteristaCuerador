@@ -22,9 +22,14 @@ export class ComunService {
   setCookie(text:string){
     this.cookie.set('categoria', text);
   }
+  setCookieTitulo(titulo:string){
+    this.cookie.set('titulo', titulo);
+  }
 
   getCookie(){
     return this.cookie.get('categoria');
-    
+  }
+  getTitulo(){
+    return this.cookie.get('titulo');
   }
 }

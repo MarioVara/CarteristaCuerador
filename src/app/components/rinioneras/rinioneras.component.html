@@ -2,17 +2,19 @@
     <h1>{{this.primeraMayus()}}</h1>
 
     @if (!resultado || resultado.length === 0) {
-      <div class="Loading"> Cargando</div>
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+          </div>
     }
     @else {
         <div class="galeria">
             @for(linea of resultado; track $index){
         
                 <figure class="imagen" (click)="moversea('individual', linea.titulo)">
-                    <img src={{url}}{{linea.foto}} class="img-thumbnail" alt={{linea.titulo}}>
-                    <figcaption class="texto">{{linea.titulo}}</figcaption>
+                    <img src={{url}}{{linea.foto}}  alt={{linea.titulo}}>
+                    <p class="texto">{{linea.titulo}}</p>
                 </figure>}
             </div> 
     }
-    
+    <div class="pie"></div>
 </div>

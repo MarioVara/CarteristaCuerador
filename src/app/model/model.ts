@@ -6,7 +6,6 @@ export class Foto{
     descripcion: string;
     categoria: string;
 
-
   constructor(
     id: number, 
     principal: boolean, 
