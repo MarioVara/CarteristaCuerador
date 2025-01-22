@@ -1,12 +1,14 @@
 .carrusel {
     width: 50%;  
-    height: 30%;            /* Ajusta la altura del carrusel */
     margin: 0 auto;           /* Centra el carrusel en la página */
+    background-color: #5a5550;
+    border-radius: 15px;
   }
   
   .centro {
     width: 100%;              /* Asegura que ocupe todo el carrusel */
     height: 100%;            /* Ajusta la altura del carrusel */
+    cursor: pointer;
   }
   
   .centro img {
@@ -14,15 +16,21 @@
     height: 100%;             /* Asegura que las imágenes respeten la altura */
     width: 100%;              /* Asegura que las imágenes respeten el ancho */
   }
+
+  .imagenCarrusel{
+    margin: 20px;
+  }
+
   .cuerpo{
-   background: #ce6400; /* Cambia los colores según prefieras */
+   background: #ada399; /* Cambia los colores según prefieras */
     margin: 0; /* Elimina márgenes predeterminados */
-    height: 100%; /* Asegura que cubra toda la altura de la pantalla */
+    background-size: auto; /* Asegura que cubra toda la altura de la pantalla */
   }
   h1 {
-    padding: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    letter-spacing: 50px; /* Ajusta el espacio entre letras */
+    letter-spacing: 45%; /* Ajusta el espacio entre letras */
     font-size: 300%;
     text-align: center;
   }
@@ -42,9 +50,16 @@
     height: 200px;            /* Alto del contenedor */
     align-items: center;      /* Centra horizontalmente */
     text-align: center;       /* Alinea el texto */
+    cursor: pointer;
     
   }
   .pequenia {
-    width: 200px;              /* Imagen ocupa todo el ancho del contenedor */
-    height: 200px;             /* Ajusta la altura proporcionalmente */
+    width: 160px;              /* Imagen ocupa todo el ancho del contenedor */
+    height: 160px;             /* Ajusta la altura proporcionalmente */
+    margin-left: 10px;
+    border-radius: 150px;
+  }
+  .pequenia:hover{
+    background-color: #4b4742ad;
+    cursor: pointer;
   }

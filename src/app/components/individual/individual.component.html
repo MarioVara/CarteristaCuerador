@@ -17,7 +17,6 @@
 							
 								<div [ngClass]="{'active': activeIndex == $index}" class="tab-pane" id="{{$index}}"><img src={{url}}{{resultado[$index].foto}} /></div>
 
-							
 						  }
 
 						</div>
@@ -25,7 +24,7 @@
 						  
 						  @for(linea of resultado; track $index){
 							
-							<li (click)="setActive($index)"><a data-target="#{{$index}}" data-toggle="tab"><img src={{url}}{{resultado[$index].foto}} /></a></li>
+							<li [ngClass]="{'active': activeIndex == $index}" (click)="setActive($index)"><a data-target="#{{$index}}" data-toggle="tab"><img src={{url}}{{resultado[$index].foto}} /></a></li>
 				
 						  }
 						</ul>
@@ -46,7 +45,7 @@
 						<p class="product-description">{{resultado[0].descripcion}}</p>
 
 						<div class="action">
-							<h5>¿Quieres uno?</h5>
+							<h5>¿Quieres uno/a??</h5>
 							<button class="add-to-cart btn btn-default" type="button" (click)="moversea()">Contacta con nosotros</button>
 							
 						</div>

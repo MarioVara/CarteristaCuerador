@@ -33,9 +33,9 @@ constructor(private router:Router, private comun:ComunService, private get:Gette
     
      // Asegurarse de que la categoría no esté vacía antes de transformarla
     if (category && category.length > 0) {
-      this.escribirCategoria = category.charAt(0).toUpperCase() + category.slice(1);
+      category = category.toUpperCase();
     } else {
-      this.escribirCategoria = category; // Si la categoría está vacía, no hacer nada
+      category = category; // Si la categoría está vacía, no hacer nada
     }
     return category;
   }

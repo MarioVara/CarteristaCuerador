@@ -1,12 +1,14 @@
 .botones {
-    color: rgb(0, 0, 0);
     display: flex; /* Flexbox para alinear elementos */
-    justify-content: flex-start; /* Alinear elementos al lado izquierdo */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px; /* Espaciado horizontal entre los botones */
   }
   
   .botones .btn {
     color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 2px #9b9b9b;
+    font-weight: 600;
     background-color: transparent; /* Fondo transparente inicialmente */
     padding: 5px 20px; /* Ajusta el tamaño del botón */
     font-size: 16px; /* Ajusta el tamaño del texto */
@@ -16,13 +18,13 @@
   }
   
   .botones .btn:hover {
-    background-color: #7e3d00; /* Fondo blanco al inicio del hover */
+    background-color: #887a6d; /* Fondo cuando se hace el hover */
     color: #000000; /* Texto azul durante el hover */
-    border-color: #000000; /* Cambia el borde a azul */
+    border-color: #000000; /* Cambia el borde a negro */
   }
   
   .navbar {
-    background-color: #ce6400;
+    background-color: #5a5550;
     color:rgb(0, 0, 0);
     display: flex; /* Flexbox para alinear elementos */
     justify-content: flex-start; /* Alinear elementos al lado izquierdo */
@@ -31,6 +33,8 @@
   
   .navbar .btn {
     color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 2px #9b9b9b;
+    font-weight: 600;
     background-color: transparent; /* Fondo transparente inicialmente */
     padding: 5px 18px; /* Ajusta el tamaño del botón */
     font-size: 16px; /* Ajusta el tamaño del texto */
@@ -38,17 +42,26 @@
     border: 1px solid rgb(0, 0, 0); /* Borde inicial */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
   }
-  
+  .navbar .btn2 {
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 2px #757575;
+    background-color: transparent; /* Fondo transparente inicialmente */
+    padding: 9px 8px; /* Ajusta el tamaño del botón */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid rgb(0, 0, 0); /* Borde inicial */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  }
   .navbar .btn:hover {
-    background-color: #7e3d00; /* Fondo blanco al inicio del hover */
+    background-color: #887a6d; /* Fondo blanco al inicio del hover */
     color: rgb(0, 0, 0); /* Texto azul durante el hover */
     border-color: rgb(0, 0, 0); /* Cambia el borde a azul */
   }
   .pos-f-t {
-    background-color: #ce6400; /* Cambia el fondo principal */
+    background-color: #5a5550; /* Cambia el fondo principal */
   }
   .bg-dark {
-    background-color: #ce6400 !important; /* Cambia el fondo de las secciones colapsadas */
+    background-color: #5a5550 !important; /* Cambia el fondo de las secciones colapsadas */
   }
   .puntos{
     color:rgb(0, 0, 0);
