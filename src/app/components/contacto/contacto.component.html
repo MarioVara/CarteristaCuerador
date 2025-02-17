@@ -1,13 +1,50 @@
 <div class="cuerpo">
-    <div class="contacto">
-        <h1>CONTACTO</h1>
+	<div class="contacto">	
+					<h2>Contacta con nosotros rellenando el formulario</h2>
+			
+				<div class="formulario">
+					<form [formGroup]="form()">
+						<div class="form-group">
+						<label class="control-label col-sm-2" for="fname">Nombre completo:</label>
+						<div class="col-sm-10">          
+							<input type="text" class="form-control" formControlName="nombre" id="nombre" placeholder="Introduce tu nombre" name="nombre">
+						</div>
+						</div>
+						<div class="form-group">
+						<label class="control-label col-sm-2" for="lname">Teléfono:</label>
+						<div class="col-sm-10">          
+							<input type="number" pattern="^[679]{1}[0-9]{8}$" class="form-control" type="tel" formControlName="telefono" id="telefono" placeholder="Introduce tu teléfono" name="telefono">
+						</div>
+						</div>
+						<div class="form-group">
+						<label class="control-label col-sm-2" for="email">Correo electrónico:</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="email" formControlName="email" placeholder="Introduce tu correo" name="email">
+						</div>
+						</div>
+						<div class="form-group">
+						<label class="control-label col-sm-2" for="comment">Comentario:</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="5" formControlName="mensaje" id="comentario" placeholder="Cuentanos qué necesitas"></textarea>
+						</div>
+						</div>
+						<div class="form-group">        
+							<button type="submit" (click)="OnSubmit()" class="btn btn-default">Enviar</button>
+						</div>
+					</form>	
+				</div>
+			
+	</div>
 
-        <h4><a href="https://www.instagram.com/carterista_cuerador?igsh=NTZoNWpkcGp2b2F1" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram">  </i>  Instagram   <i class="bi bi-instagram"></i></a></h4>
-        <h4><a href="tel:+34608175135" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp">  </i>  Whatsapp   <i class="bi bi-whatsapp"></i></a></h4>
-        <h4><a  href="https://www.tiktok.com/@carterista.cuerador?_t=8rr05iLSfLt&_r=1" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok">  </i>  TikTok   <i class="bi bi-tiktok"></i></a></h4>
-        
-        <h5 class="ultimo">Escribenos sin comprosimo por redes sociales y pregunta precio y personalizaciones</h5>
-    </div>
-    
-    
+	<div class="contacto">
+		<h2>Si lo prefieres escribenos a nuestras redes sociales</h2>
+
+		<h4><a href="https://www.instagram.com/carterista_cuerador?igsh=NTZoNWpkcGp2b2F1" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram">  </i>  </a>
+			&nbsp;&nbsp;
+			<a href="tel:+34608175135" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp">  </i> </a>
+			&nbsp;&nbsp;
+			<a  href="https://www.tiktok.com/@carterista.cuerador?_t=8rr05iLSfLt&_r=1" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok">  </i>  </a>
+		</h4>
+		
+	</div>
 </div>

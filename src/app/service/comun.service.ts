@@ -3,13 +3,14 @@ import { Router } from '@angular/router';
 import { CookieService} from 'ngx-cookie-service';
 import { Foto } from '../model/model';
 import { GettersService } from '../server/getters.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ComunService {
 
-  constructor(private router: Router, private cookie:CookieService) { }
+  constructor(private router: Router, private cookie:CookieService, private _http:HttpClient) { }
 
   resultado!:Foto[];
 
@@ -31,5 +32,8 @@ export class ComunService {
   }
   getTitulo(){
     return this.cookie.get('titulo');
+  }
+  enviarMensaje(body:any){
+    return this._http.post('http://localhost:3000/envio', body);
   }
 }

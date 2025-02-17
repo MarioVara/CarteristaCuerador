@@ -1,25 +1,33 @@
 .carrusel {
-    width: 50%;  
-    margin: 0 auto;           /* Centra el carrusel en la página */
-    background-color: #5a5550;
-    border-radius: 15px;
-  }
-  
-  .centro {
-    width: 100%;              /* Asegura que ocupe todo el carrusel */
-    height: 100%;            /* Ajusta la altura del carrusel */
-    cursor: pointer;
-  }
-  
-  .centro img {
-    object-fit: contain;        /* Asegura que las imágenes llenen el contenedor */
-    height: 100%;             /* Asegura que las imágenes respeten la altura */
-    width: 100%;              /* Asegura que las imágenes respeten el ancho */
-  }
+  height: 50vh;  /* Ocupa el 40% de la altura de la pantalla */
+  width: 50vw;   /* Ocupa el 50% del ancho de la pantalla */
+  max-width: 600px; /* Máximo ancho para evitar que sea muy grande en pantallas grandes */
+  margin: 0 auto;
+  background-color: #5a5550;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .imagenCarrusel{
-    margin: 20px;
+.imagenCarrusel {
+  object-fit: contain;
+  height: 100%;  /* Ajusta la imagen a la altura del carrusel */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .carrusel {
+      width: 90vw;  /* Más ancho en pantallas pequeñas */
+      height: 50vh; /* Más alto en pantallas pequeñas */
   }
+}
+.centro {
+  justify-content: center;
+  cursor: pointer;
+}
+
 
   .cuerpo{
    background: #ada399; /* Cambia los colores según prefieras */
