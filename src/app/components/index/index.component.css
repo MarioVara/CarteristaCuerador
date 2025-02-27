@@ -65,9 +65,11 @@
     width: 160px;              /* Imagen ocupa todo el ancho del contenedor */
     height: 160px;             /* Ajusta la altura proporcionalmente */
     margin-left: 10px;
-    border-radius: 150px;
+    border-radius: 0px;
   }
-  .pequenia:hover{
-    background-color: #4b4742ad;
+  .categorias:hover{
+    background-color: #6d6761ad;
     cursor: pointer;
+    border-radius: 60px;
+
   }
