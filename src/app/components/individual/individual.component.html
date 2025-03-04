@@ -13,18 +13,18 @@
 						
 						<div class="preview-pic tab-content">
 						  
-						  @for(linea of resultado; track $index){
+						  @for(linea of resultado[0].foto; track $index){
 							
-								<div [ngClass]="{'active': activeIndex == $index}" class="tab-pane" id="{{$index}}"><img src={{url}}{{resultado[$index].foto}} /></div>
+								<div [ngClass]="{'active': activeIndex == $index}" class="tab-pane" id="{{$index}}"><img src={{url}}{{resultado[0].foto[$index]}} /></div>
 
 						  }
 
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
 						  
-						  @for(linea of resultado; track $index){
+						  @for(linea of resultado[0].foto; track $index){
 							
-							<li [ngClass]="{'active': activeIndex == $index}" (click)="setActive($index)"><a data-target="#{{$index}}" data-toggle="tab"><img src={{url}}{{resultado[$index].foto}} /></a></li>
+							<li [ngClass]="{'active': activeIndex == $index}" (click)="setActive($index)"><a data-target="#{{$index}}" data-toggle="tab"><img src={{url}}{{resultado[0].foto[$index]}} /></a></li>
 				
 						  }
 						</ul>

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { __values } from 'tslib';
 import { ComunService } from '../../service/comun.service';
 import { GettersService } from '../../server/getters.service';
-import { Foto } from '../../model/model';
+import { Item } from '../../model/model';
 @Component({
   selector: 'app-todas',
   imports: [],
@@ -17,7 +17,7 @@ export class TodasComponent implements OnInit{
   categoria:string = "";
   esLaCategoria:string ="";
   escribirCategoria:string ="";
-  resultado!:Foto[];
+  resultado!:Item[];
   url:string ='http://localhost/carteristacuerador/fotos/';
   
   ngOnInit(): void {

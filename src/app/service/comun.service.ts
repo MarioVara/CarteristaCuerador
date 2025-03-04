@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService} from 'ngx-cookie-service';
-import { Foto } from '../model/model';
+import { Item } from '../model/model';
 import { GettersService } from '../server/getters.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,7 +12,7 @@ export class ComunService {
 
   constructor(private router: Router, private cookie:CookieService, private _http:HttpClient) { }
 
-  resultado!:Foto[];
+  resultado!:Item[];
 
 
 //Aqui tengo que meter también el parámetro para hacer la petición a la base de datos de lo que quiero recoger

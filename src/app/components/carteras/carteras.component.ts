@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComunService } from '../../service/comun.service';
 import { GettersService } from '../../server/getters.service';
-import { Foto } from '../../model/model';
+import { Item } from '../../model/model';
 
 @Component({
   selector: 'app-carteras',
@@ -17,7 +17,7 @@ export class CarterasComponent implements OnInit{
   categoria:string = "";
   esLaCategoria:string ="";
   escribirCategoria:string ="";
-  resultado!:Foto[];
+  resultado!:Item[];
   url:string ='http://localhost/carteristacuerador/fotos/';
   
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Foto } from '../../model/model';
+import { Item } from '../../model/model';
 import { GettersService } from '../../server/getters.service';
 import { ComunService } from '../../service/comun.service';
 import { Router } from '@angular/router';
@@ -17,7 +17,7 @@ constructor(private router:Router, private comun:ComunService, private get:Gette
   categoria:string = "";
   esLaCategoria:string ="";
   escribirCategoria:string ="";
-  resultado!:Foto[];
+  resultado!:Item[];
   url:string ='http://localhost/carteristacuerador/fotos/';
   
   ngOnInit(): void {

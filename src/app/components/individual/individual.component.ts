@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { ComunService } from '../../service/comun.service';
 import { GettersService } from '../../server/getters.service';
-import { Foto } from '../../model/model';
+import { Item } from '../../model/model';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -15,8 +15,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   standalone: true
 })
 export class IndividualComponent implements OnInit {
-   resultado!:Foto[];
-   foto!:Foto;
+   resultado!:Item[];
    url:string ='http://localhost/carteristacuerador/fotos/';
   activeIndex: number = 0;
   constructor(private router:Router, private comun:ComunService, private get:GettersService, private sanitizer:DomSanitizer){}
@@ -24,7 +23,8 @@ export class IndividualComponent implements OnInit {
   ngOnInit(): void {
     this.get.getIndividual(this.comun.getTitulo()).subscribe(result =>{
       this.resultado = result;
-      console.log(this.resultado)}
+      console.log('result: ' + result);
+      }
     )
     ;
   }

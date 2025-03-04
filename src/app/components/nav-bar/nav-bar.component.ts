@@ -3,7 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { ComunService } from '../../service/comun.service';
 import { GettersService } from '../../server/getters.service';
-import { Foto } from '../../model/model';
+
 @Component({
   selector: 'app-nav-bar',
   imports: [],
@@ -13,7 +13,7 @@ import { Foto } from '../../model/model';
 })
 export class NavBarComponent {
   constructor(private router: Router, private comun:ComunService, private get: GettersService){}
-    resultado!:Foto[];
+    
   
   ngOnInit() {
     

@@ -11,7 +11,7 @@
             @for(linea of resultado; track $index){
         
                 <figure class="imagen" (click)="moversea('individual', linea.titulo)">
-                    <img src={{url}}{{linea.foto}}  alt={{linea.titulo}}>
+                    <img src={{url}}{{linea.foto[0]}}  alt={{linea.titulo}}>
                     <p class="texto">{{linea.titulo}}</p>
                 </figure>}
             </div> 
