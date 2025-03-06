@@ -9,21 +9,31 @@
       </div>
     </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button
-      class="puntos navbar-toggler btn2"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarToggleExternalContent"
-      aria-controls="navbarToggleExternalContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-    <i class="bi bi-list"></i>
-    </button>
-    <div class="navbar">
-      <button class="btn" (click)="moversea('/')">Inicio</button>
-      <button class="btn" (click)="moversea('contacto')">Contacto</button>
-    </div>
-  </nav>
+  
+    <nav class="navbar navbar-dark bg-dark">
+      <button
+        class="puntos navbar-toggler btn2"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+      <i class="bi bi-list"></i>
+      </button>
+      <div class="navbar">
+        <button class="btn" (click)="moversea('/')">Inicio</button>
+        <button class="btn" (click)="moversea('contacto')">Contacto</button>
+      </div>
+      @if(auth){
+      <div class="navbar2">
+        <button class="btn" (click)="logOut()"><i class="bi bi-x-octagon-fill"></i></button>
+      </div>}
+      @else{
+      <div class="navbar2">
+        <button class="btn" (click)="logIn()"><i class="bi bi-database-fill"></i></button>
+      </div>}
+    </nav>
+    
 </div>

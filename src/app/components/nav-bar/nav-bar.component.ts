@@ -12,6 +12,7 @@ import { GettersService } from '../../server/getters.service';
   standalone:true
 })
 export class NavBarComponent {
+  auth:boolean = false;
   constructor(private router: Router, private comun:ComunService, private get: GettersService){}
     
   
@@ -26,5 +27,13 @@ export class NavBarComponent {
     this.comun.setCookie(con);
     this.router.navigate(['/'+a+'/'+con]);
     
+  }
+  logIn(){
+    console.log('Login');
+    this.auth = true;
+  }
+  logOut(){
+    console.log('Logout');
+    this.auth = false;
   }
 }

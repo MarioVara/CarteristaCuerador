@@ -8,6 +8,7 @@ import { CarterasComponent } from './components/carteras/carteras.component';
 import { MonederosComponent } from './components/monederos/monederos.component';
 import { OtrosComponent } from './components/otros/otros.component';
 import { ExclusivoComponent } from './components/exclusivo/exclusivo.component';
+import { AdminAreaComponent } from './components/admin-area/admin-area.component';
 
 
 export const routes: Routes = [
@@ -21,6 +22,7 @@ export const routes: Routes = [
     {path: 'monederos/:categoria', component: MonederosComponent},
     {path: 'otros/:categoria', component: OtrosComponent},
     {path: 'exclusivo/:titulo', component: ExclusivoComponent},
+    {path: 'admin', component: AdminAreaComponent},
 
 
 

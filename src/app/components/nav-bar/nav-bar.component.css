@@ -4,7 +4,6 @@
     justify-content: center;
     gap: 10px; /* Espaciado horizontal entre los botones */
   }
-  
   .botones .btn {
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 2px #9b9b9b;
@@ -16,22 +15,38 @@
     border: 1px solid rgb(0, 0, 0); /* Borde inicial */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
   }
-  
   .botones .btn:hover {
     background-color: #887a6d; /* Fondo cuando se hace el hover */
     color: #000000; /* Texto azul durante el hover */
     border-color: #000000; /* Cambia el borde a negro */
   }
-  
+
   .navbar {
     background-color: #5a5550;
     color:rgb(0, 0, 0);
-    display: flex; /* Flexbox para alinear elementos */
     justify-content: flex-start; /* Alinear elementos al lado izquierdo */
     gap: 10px; /* Espaciado horizontal entre los botones */
   }
-  
+  .navbar2 {
+    background-color: #5a5550;
+    color:rgb(0, 0, 0);
+    justify-content: flex-end; /* Alinear elementos al lado izquierdo */
+    gap: 10px; /* Espaciado horizontal entre los botones */
+    margin-left: auto;
+    margin-right: 1%;
+  }
   .navbar .btn {
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 2px #9b9b9b;
+    font-weight: 600;
+    background-color: transparent; /* Fondo transparente inicialmente */
+    padding: 5px 18px; /* Ajusta el tamaño del botón */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid rgb(0, 0, 0); /* Borde inicial */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  }  
+  .navbar2 .btn {
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 2px #9b9b9b;
     font-weight: 600;
@@ -53,6 +68,12 @@
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
   }
   .navbar .btn:hover {
+    background-color: #887a6d; /* Fondo blanco al inicio del hover */
+    color: rgb(0, 0, 0); /* Texto azul durante el hover */
+    border-color: rgb(0, 0, 0); /* Cambia el borde a azul */
+  }  
+  
+  .navbar2 .btn:hover {
     background-color: #887a6d; /* Fondo blanco al inicio del hover */
     color: rgb(0, 0, 0); /* Texto azul durante el hover */
     border-color: rgb(0, 0, 0); /* Cambia el borde a azul */
