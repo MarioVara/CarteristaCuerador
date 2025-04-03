@@ -25,14 +25,16 @@
       <div class="navbar">
         <button class="btn" (click)="moversea('/')">Inicio</button>
         <button class="btn" (click)="moversea('contacto')">Contacto</button>
+        @if(rol=='Admin'){
+          <button class="btn" (click)="moversea('admin')">Admin</button>}
       </div>
-      @if(auth){
+      @if(authy){
       <div class="navbar2">
-        <button class="btn" (click)="logOut()"><i class="bi bi-x-octagon-fill"></i></button>
+        <button class="btn" (click)="auth.logout()"><i class="bi bi-x-octagon-fill"></i></button>
       </div>}
       @else{
       <div class="navbar2">
-        <button class="btn" (click)="logIn()"><i class="bi bi-database-fill"></i></button>
+        <button class="btn" (click)="this.auth.loginWithRedirect()"><i class="bi bi-database-fill"></i></button>
       </div>}
     </nav>
     

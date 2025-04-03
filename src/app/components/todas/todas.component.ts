@@ -18,10 +18,11 @@ export class TodasComponent implements OnInit{
   esLaCategoria:string ="";
   escribirCategoria:string ="";
   resultado!:Item[];
-  url:string ='http://localhost/carteristacuerador/fotos/';
-  
+  //url:string ='http://localhost/carteristacuerador/fotos/';
+  url:string ='https://www.carteristacuerador.com/fotos/'
+
   ngOnInit(): void {
-    this.get.getTodasPrincipales().subscribe(result =>{
+    this.get.getTodo().subscribe(result =>{
       this.resultado = result;
       console.log(this.resultado)}
     )

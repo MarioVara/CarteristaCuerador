@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { ComunService } from '../../service/comun.service';
 import { GettersService } from '../../server/getters.service';
+import { AuthService } from '@auth0/auth0-angular';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,12 +13,27 @@ import { GettersService } from '../../server/getters.service';
   standalone:true
 })
 export class NavBarComponent {
-  auth:boolean = false;
-  constructor(private router: Router, private comun:ComunService, private get: GettersService){}
+  authy:boolean = false;
+  rol:string = '';
+  constructor(private router: Router, private comun:ComunService, private get: GettersService, public auth: AuthService){}
+
     
   
   ngOnInit() {
-    
+    this.auth.isAuthenticated$.subscribe(isAuth =>{
+      if(isAuth){
+        this.authy = true;
+      }
+    })
+    this.getUserRoles().subscribe(roles =>{
+      for(let rol of roles){
+        console.log('rol' + rol)
+        if (rol == 'Admin'){
+          this.rol = rol;
+        }
+        
+        console.log( 'Official Rol' + this.rol);
+    }});
   }
   moversea(a: string){
     this.router.navigate(['/'+a])
@@ -28,12 +44,13 @@ export class NavBarComponent {
     this.router.navigate(['/'+a+'/'+con]);
     
   }
-  logIn(){
-    console.log('Login');
-    this.auth = true;
-  }
-  logOut(){
-    console.log('Logout');
-    this.auth = false;
+
+  getUserRoles(): Observable<string[]> {
+    return this.auth.user$.pipe(
+      map((user) => {
+        const namespace = 'http://localhost:4200';
+        return user ? (user[namespace + 'roles'] as string[]) : [];
+      })
+    );
   }
 }

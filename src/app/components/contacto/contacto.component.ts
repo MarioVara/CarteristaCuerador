@@ -21,25 +21,33 @@ export class ContactoComponent {
       mensaje: new FormControl('', Validators.required)
     })
   )
+  // OnSubmit(){
+  //   if(this.form().valid){
+  //     console.log(this.form().valid);
+  //     console.log(this.form().value);
+
+  //     this.comun.enviarMensaje(this.form().value).subscribe();
+
+  //     Swal.fire("Su mensaje ha sido enviado con éxito!");
+  //     this.form().reset();
+  //   }
+  //   else{
+  //     console.log(this.form().value);
+  //     console.log(this.form().valid);
+
+  //     Swal.fire({
+  //       icon: "error",
+  //       title: "Uy!",
+  //       text: "Revisa que todos los campos estén completos y que el email sea válido.",
+  //     });
+  //   }
+  // }
   OnSubmit(){
-    if(this.form().valid){
-      console.log(this.form().valid);
-      console.log(this.form().value);
-
-      this.comun.enviarMensaje(this.form().value).subscribe();
-
-      Swal.fire("Su mensaje ha sido enviado con éxito!");
-      this.form().reset();
-    }
-    else{
-      console.log(this.form().value);
-      console.log(this.form().valid);
-
-      Swal.fire({
-        icon: "error",
-        title: "Uy!",
-        text: "Revisa que todos los campos estén completos y que el email sea válido.",
-      });
-    }
+    Swal.fire({
+            icon: "error",
+            title: "Discupe las molestias",
+            text: "Este campo esta en labores de mantenimiento. Contacte con nosotros mediante redes sociales.",
+          });
   }
+
 }

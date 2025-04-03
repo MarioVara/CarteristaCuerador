@@ -7,11 +7,13 @@ import { Item } from '../model/model';
 })
 export class GettersService {
   
-  url:string = 'http://localhost/carteristacuerador/php_carterista/consultas.php/';
+  //url:string = 'http://localhost/carteristacuerador/php_carterista/consultas.php/';
+  url:string = 'https://www.carteristacuerador.com/php_carterista/consultas.php/';
+
   
   constructor(private http:HttpClient) { }
 
-  getTodasPrincipales (){
+  getTodo(){
     const fotos = this.http.get<Item[]>(`${this.url}getTodasPrincipales`,);
     console.log(fotos)
     return fotos;
@@ -27,6 +29,10 @@ export class GettersService {
     const fotos = this.http.get<Item[]>(`${this.url}getUna/${titulo}`,);
     console.log(fotos)
     return fotos;
-
+  }
+  getIndividualPorId(id:string){
+    const fotos = this.http.get<Item>(`${this.url}getUnaId/${id}`,);
+    console.log(fotos)
+    return fotos;
   }
 }

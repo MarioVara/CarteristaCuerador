@@ -18,8 +18,9 @@ constructor(private router:Router, private comun:ComunService, private get:Gette
   esLaCategoria:string ="";
   escribirCategoria:string ="";
   resultado!:Item[];
-  url:string ='http://localhost/carteristacuerador/fotos/';
-  
+  //url:string ='http://localhost/carteristacuerador/fotos/';
+  url:string ='https://www.carteristacuerador.com/fotos/'
+
   ngOnInit(): void {
     this.get.getPrincipalesDe(this.comun.getCookie()).subscribe(result =>{
       this.resultado = result;

@@ -16,7 +16,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class IndividualComponent implements OnInit {
    resultado!:Item[];
-   url:string ='http://localhost/carteristacuerador/fotos/';
+   //url:string ='http://localhost/carteristacuerador/fotos/';
+   url:string ='https://www.carteristacuerador.com/fotos/'
   activeIndex: number = 0;
   constructor(private router:Router, private comun:ComunService, private get:GettersService, private sanitizer:DomSanitizer){}
  

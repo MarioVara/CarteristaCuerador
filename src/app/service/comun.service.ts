@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService} from 'ngx-cookie-service';
 import { Item } from '../model/model';
-import { GettersService } from '../server/getters.service';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -13,8 +12,9 @@ export class ComunService {
   constructor(private router: Router, private cookie:CookieService, private _http:HttpClient) { }
 
   resultado!:Item[];
-
-
+  
+  urlCorreos:string = 'http://localhost:3000/envio';
+  //urlCorreos:string = 'https://www.carteristacuerador.com/BackendCorreos/envio';
 //Aqui tengo que meter también el parámetro para hacer la petición a la base de datos de lo que quiero recoger
   irA(donde:string, categoria:string){
     this.router.navigate(['/'+donde+'/'+categoria]);
@@ -34,6 +34,6 @@ export class ComunService {
     return this.cookie.get('titulo');
   }
   enviarMensaje(body:any){
-    return this._http.post('http://localhost:3000/envio', body);
+    return this._http.post(this.urlCorreos, body);
   }
 }

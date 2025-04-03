@@ -1,1 +1,48 @@
-<p>admin-area works!</p>
+<div class="conjunto">
+    <!-- ---------------------------------------    Editar  --------------------------------------- -->
+    <div class="cuadrado">
+    <h2>Edita un producto</h2>
+        <div class="formulario" >
+            <p>Elige el producto</p>
+            <select name="EditProductoId" [(ngModel)]="EditProductoId">
+                <option value=""></option>"
+                @for(producto of productos; track $index){
+                    <option value="{{producto.id }}">{{producto.titulo}}</option>
+                }
+            </select> 
+            <br>
+            <button  class="btn btn-primary" (click)="editarItem(EditProductoId)">Editar</button>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------------    Añadir  ---------------------------------------  -->
+
+    <div class="cuadrado">
+        <h2>Añade un producto</h2>
+        <br>
+        <div class="formulario">
+            <button  class="btn btn-warning" (click)="aniadirItem()">Añadir</button>
+        </div>
+    </div>
+
+
+    <!--   ---------------------------------------   Eliminar  ---------------------------------------  -->
+    <div class="cuadrado">
+        <h2>Elimina un producto</h2>
+        <div class="formulario">
+            <p>Elige el producto</p>
+            <select name="DelProductoId" [(ngModel)]="DelProductoId">
+                <option value=""></option>"
+                @for(producto of productos; track $index){
+                    <option value="{{producto.id }}">{{producto.titulo}}</option>
+                }
+            </select> 
+            <br>
+
+            <button class="btn btn-danger" (click)="eliminarItem(DelProductoId)">Eliminar</button>
+        </div>
+    </div>
+
+</div>

@@ -9,6 +9,7 @@ import { MonederosComponent } from './components/monederos/monederos.component';
 import { OtrosComponent } from './components/otros/otros.component';
 import { ExclusivoComponent } from './components/exclusivo/exclusivo.component';
 import { AdminAreaComponent } from './components/admin-area/admin-area.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 
 export const routes: Routes = [
@@ -19,10 +20,11 @@ export const routes: Routes = [
     {path: 'individual/:objeto', component: IndividualComponent},
     {path: 'todas/:categoria', component: TodasComponent},
     {path: 'carteras/:categoria', component: CarterasComponent},
-    {path: 'monederos/:categoria', component: MonederosComponent},
+    {path: 'monederos/:categoria', component: MonederosComponent },
     {path: 'otros/:categoria', component: OtrosComponent},
     {path: 'exclusivo/:titulo', component: ExclusivoComponent},
     {path: 'admin', component: AdminAreaComponent},
+    {path: 'form/:idProducto', component: FormularioComponent},
 
 
 
